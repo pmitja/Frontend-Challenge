@@ -1,0 +1,28 @@
+.field.field--name-field-link.field--type-link.field--label-hidden.field__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18rem;
+  height: 5rem;
+  background: $color-red;
+  border-radius: 5px;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $color-black;
+    border-radius: 5px;
+    border: 1px solid $color-light-grey;
+
+    box-shadow: 0px 0px 30px $color-black;
+  }
+
+  & a {
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+  }
+}

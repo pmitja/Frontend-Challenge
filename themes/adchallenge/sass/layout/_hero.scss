@@ -1,0 +1,36 @@
+#block-top-content-header {
+  height: 100vh;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#challenge-home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 6.4rem;
+    line-height: 7.5rem;
+    letter-spacing: 0.5rem;
+
+    text-transform: capitalize;
+  }
+
+  & h2 {
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    padding: 3.2rem;
+
+    border-bottom: 2px solid $color-white;
+  }
+}

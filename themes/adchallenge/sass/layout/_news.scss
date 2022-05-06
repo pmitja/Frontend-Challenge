@@ -1,0 +1,99 @@
+#challenge-news {
+  width: 80%;
+  margin: 0 auto;
+  padding: 12.3rem 0 12.3rem 0;
+
+  & h2 {
+    position: relative;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+    text-transform: uppercase;
+
+    &.first-h2::after {
+      content: "";
+      position: absolute;
+      width: 10rem;
+      height: 0.2rem;
+      background: $color-blue;
+
+      top: 6rem;
+      left: 0rem;
+    }
+
+    &.margin-b {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.views-element-container {
+  & .view-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 6rem;
+
+    @include respond(laptop) {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @include respond(tab) {
+      gap: 3rem;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .views-row {
+      & article {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      & img {
+        max-width: 100%;
+        height: 100%;
+      }
+
+      & article a {
+        text-decoration: none;
+        text-transform: none;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
+
+      & .node__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        & .createdDate {
+          color: $color-light-grey;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          text-transform: uppercase;
+        }
+
+        &
+          .clearfix.text-formatted.field.field--name-body.field--type-text-with-summary.field--label-hidden.field__item {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 3rem;
+
+          & p {
+            color: $color-light-grey;
+          }
+        }
+      }
+    }
+  }
+}
