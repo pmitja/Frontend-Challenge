@@ -33,6 +33,18 @@ textarea {
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
+}
+
+.focus {
+  border-bottom: 2px solid $color-blue;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: $color-white;
 }

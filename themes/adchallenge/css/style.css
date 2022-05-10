@@ -35,8 +35,20 @@ textarea {
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
+}
+
+.focus {
+  border-bottom: 2px solid #0097a7;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #ffffff;
 }
 
 .region-header {
@@ -67,7 +79,7 @@ textarea {
   align-items: center;
   gap: 3rem;
 }
-@media only screen and (max-width: 29.5em) {
+@media only screen and (max-width: 37.5em) {
   .block.block-system.block-system-branding-block {
     gap: 0;
   }
@@ -80,7 +92,7 @@ textarea {
     max-width: 80%;
   }
 }
-@media only screen and (max-width: 29.5em) {
+@media only screen and (max-width: 37.5em) {
   .block.block-system.block-system-branding-block a img {
     max-width: 50%;
   }
@@ -92,7 +104,7 @@ textarea {
   gap: 4rem;
   text-transform: uppercase;
 }
-@media only screen and (max-width: 29.5em) {
+@media only screen and (max-width: 37.5em) {
   .menu {
     gap: 2rem;
   }
@@ -103,14 +115,16 @@ textarea {
 .menu-item a:hover {
   border-bottom: 2px solid #0097a7;
 }
-.menu-item a:focus {
-  border-bottom: 2px solid #0097a7;
-}
 
 #challenge-news {
-  width: 80%;
+  max-width: 105rem;
   margin: 0 auto;
-  padding: 12.3rem 0 12.3rem 0;
+  padding: 12.3rem 0 5.8rem 0;
+}
+@media only screen and (max-width: 74em) {
+  #challenge-news {
+    margin: 5rem;
+  }
 }
 #challenge-news h2 {
   position: relative;
@@ -136,11 +150,10 @@ textarea {
 .views-element-container .view-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6rem;
 }
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 65.6em) {
   .views-element-container .view-content {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 48em) {
@@ -148,11 +161,14 @@ textarea {
     gap: 3rem;
   }
 }
-@media only screen and (max-width: 29.5em) {
+@media only screen and (max-width: 37.5em) {
   .views-element-container .view-content {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
+}
+.views-element-container .view-content .views-row {
+  max-width: 31rem;
 }
 .views-element-container .view-content .views-row article {
   display: flex;
@@ -160,15 +176,18 @@ textarea {
   gap: 1rem;
 }
 .views-element-container .view-content .views-row img {
-  max-width: 100%;
-  height: 100%;
+  max-width: 31rem;
+  max-height: 20.3rem;
 }
 .views-element-container .view-content .views-row article a {
   text-decoration: none;
   text-transform: none;
   font-weight: 500;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   line-height: 2.8rem;
+}
+.views-element-container .view-content .views-row article a .field.field--name-title.field--type-string.field--label-hidden {
+  font-size: 2.4rem;
 }
 .views-element-container .view-content .views-row .node__content {
   display: flex;
@@ -192,9 +211,12 @@ textarea {
 .views-element-container .view-content .views-row .node__content .clearfix.text-formatted.field.field--name-body.field--type-text-with-summary.field--label-hidden.field__item p {
   color: #d4d4d4;
 }
+.views-element-container .view-content .views-row .node__content .node__links {
+  margin-top: 1.3rem;
+}
 
 #block-top-content-header {
-  height: 100vh;
+  height: 72.5rem;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -227,12 +249,19 @@ textarea {
 
 #block-latest-event {
   background-color: #161e21;
-  padding: 10.3rem 0 10.3rem 0;
 }
 #block-latest-event .container {
   display: flex;
   gap: 3.6rem;
   align-items: center;
+  max-width: 105rem;
+  margin: 0 auto;
+  padding: 10.3rem 0 10.3rem 0;
+}
+@media only screen and (max-width: 74em) {
+  #block-latest-event .container {
+    margin: 5rem;
+  }
 }
 @media only screen and (max-width: 48em) {
   #block-latest-event .container {
@@ -242,6 +271,16 @@ textarea {
 }
 @media only screen and (max-width: 48em) {
   #block-latest-event .container img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+#block-latest-event .container .img-left img {
+  max-width: 42rem;
+  max-height: 30rem;
+}
+@media only screen and (max-width: 37.5em) {
+  #block-latest-event .container .img-left img {
     max-width: 100%;
     height: 100%;
   }
@@ -272,29 +311,20 @@ textarea {
   color: #d4d4d4;
 }
 
-#block-about-me {
-  padding: 12rem 0 12rem 0;
-}
 #block-about-me .container {
   display: flex;
-  padding-top: 12rem;
-  gap: 10rem;
+  position: relative;
+  gap: 9.5rem;
+  max-width: 105rem;
+  margin: 0 auto;
+  padding: 24rem 0 18rem 0;
 }
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 74em) {
   #block-about-me .container {
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
-  }
-}
-@media only screen and (max-width: 48em) {
-  #block-about-me .container {
-    padding-top: 2rem;
-  }
-}
-@media only screen and (max-width: 29.5em) {
-  #block-about-me .container {
-    padding-top: 2rem;
+    margin: 5rem;
   }
 }
 #block-about-me .container .content-left h2 {
@@ -325,18 +355,27 @@ textarea {
 #block-about-me .container .img-right {
   position: relative;
 }
-@media only screen and (max-width: 48em) {
-  #block-about-me .container .img-right {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 48em) {
-  #block-about-me .container .img-right img {
-    max-width: 100%;
-    height: 100%;
-  }
-}
 #block-about-me .container .img-right::before {
+  content: "";
+  position: absolute;
+  left: -15.5rem;
+  top: -14.5rem;
+  width: 33rem;
+  height: 33rem;
+  z-index: -1;
+  background: #0f2123;
+}
+@media only screen and (max-width: 37.5em) {
+  #block-about-me .container .img-right::before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 48em) {
+  #block-about-me .container .img-right::before {
+    display: none;
+  }
+}
+#block-about-me .container .img-right::after {
   content: "";
   position: absolute;
   left: 45rem;
@@ -347,24 +386,25 @@ textarea {
   background: #1d1524;
   transform: rotate(-45deg);
 }
-@media only screen and (max-width: 48em) {
-  #block-about-me .container .img-right::before {
+@media only screen and (max-width: 37.5em) {
+  #block-about-me .container .img-right::after {
     display: none;
   }
-}
-#block-about-me .container .img-right::after {
-  content: "";
-  position: absolute;
-  left: -13rem;
-  top: -15.5rem;
-  width: 33rem;
-  height: 33rem;
-  z-index: -1;
-  background: #0f2123;
 }
 @media only screen and (max-width: 48em) {
   #block-about-me .container .img-right::after {
     display: none;
+  }
+}
+@media only screen and (max-width: 48em) {
+  #block-about-me .container .img-right {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 48em) {
+  #block-about-me .container .img-right img {
+    max-width: 100%;
+    height: 100%;
   }
 }
 
@@ -435,14 +475,14 @@ textarea {
   position: absolute;
   border: solid #0097a7;
   border-width: 0 3px 3px 0;
-  padding: 4px;
+  padding: 3px;
   transform: rotate(-45deg);
-  top: 11px;
+  top: 3px;
   margin: 0 5px auto;
 }
 @media only screen and (max-width: 48em) {
   .node-readmore a::after {
-    top: 6px;
+    top: 3px;
   }
 }
 .node-readmore a:hover::after {
@@ -450,14 +490,14 @@ textarea {
   position: absolute;
   border: solid #ff5252;
   border-width: 0 3px 3px 0;
-  padding: 4px;
+  padding: 3px;
   transform: rotate(-45deg);
-  top: 11px;
+  top: 3px;
   margin: 0 5px auto;
 }
 @media only screen and (max-width: 48em) {
   .node-readmore a:hover::after {
-    top: 6px;
+    top: 3px;
   }
 }
 

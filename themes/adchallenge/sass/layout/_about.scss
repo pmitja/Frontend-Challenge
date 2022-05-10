@@ -1,23 +1,18 @@
 #block-about-me {
-  padding: 12rem 0 12rem 0;
-
   & .container {
     display: flex;
-    padding-top: 12rem;
-    gap: 10rem;
+    position: relative;
+    gap: 9.5rem;
+
+    max-width: 105rem;
+    margin: 0 auto;
+    padding: 24rem 0 18rem 0;
 
     @include respond(laptop) {
       flex-direction: column;
       align-items: center;
       padding-top: 2rem;
-    }
-
-    @include respond(tab) {
-      padding-top: 2rem;
-    }
-
-    @include respond(phone) {
-      padding-top: 2rem;
+      margin: 5rem;
     }
 
     & .content-left {
@@ -55,18 +50,25 @@
     & .img-right {
       position: relative;
 
-      @include respond(tab) {
-        text-align: center;
-      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -15.5rem;
+        top: -14.5rem;
+        width: 33rem;
+        height: 33rem;
+        z-index: -1;
+        background: $color-big-figure;
 
-      & img {
+        @include respond(phone) {
+          display: none;
+        }
         @include respond(tab) {
-          max-width: 100%;
-          height: 100%;
+          display: none;
         }
       }
 
-      &::before {
+      &::after {
         content: "";
         position: absolute;
         left: 45rem;
@@ -77,23 +79,23 @@
         background: $color-small-figure;
         transform: rotate(-45deg);
 
+        @include respond(phone) {
+          display: none;
+        }
+
         @include respond(tab) {
           display: none;
         }
       }
 
-      &::after {
-        content: "";
-        position: absolute;
-        left: -13rem;
-        top: -15.5rem;
-        width: 33rem;
-        height: 33rem;
-        z-index: -1;
-        background: $color-big-figure;
+      @include respond(tab) {
+        text-align: center;
+      }
 
+      & img {
         @include respond(tab) {
-          display: none;
+          max-width: 100%;
+          height: 100%;
         }
       }
     }

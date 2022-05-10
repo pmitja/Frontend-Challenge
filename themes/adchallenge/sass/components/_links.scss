@@ -7,14 +7,14 @@
       position: absolute;
       border: solid $color-blue;
       border-width: 0 3px 3px 0;
-      padding: 4px;
+      padding: 3px;
       transform: rotate(-45deg);
 
-      top: 11px;
+      top: 3px;
       margin: 0 5px auto;
 
       @include respond(tab) {
-        top: 6px;
+        top: 3px;
       }
     }
 
@@ -23,14 +23,14 @@
       position: absolute;
       border: solid $color-red;
       border-width: 0 3px 3px 0;
-      padding: 4px;
+      padding: 3px;
       transform: rotate(-45deg);
 
-      top: 11px;
+      top: 3px;
       margin: 0 5px auto;
 
       @include respond(tab) {
-        top: 6px;
+        top: 3px;
       }
     }
   }
